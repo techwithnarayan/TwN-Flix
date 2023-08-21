@@ -1,4 +1,5 @@
-import 'package:flix/pages/homepage.dart';
+
+import 'package:flix/pages/landing_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       displayColor: Colors.blue, 
     ),
   ),
-      home:const  HomePage(),
+      home:const  LandingPage(),
     );
   }
 }
