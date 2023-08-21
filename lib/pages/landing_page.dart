@@ -17,23 +17,24 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
     body: Stack(
       children: [
         Expanded(
           child: PageView(
-            physics:BouncingScrollPhysics(),
+            physics:const BouncingScrollPhysics(),
             controller: _controller,
             scrollDirection: Axis.horizontal,
             children: [
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 color: Colors.black,
                child: Center(
                 child: SingleChildScrollView(
-                  physics:BouncingScrollPhysics(),
+                  physics:const BouncingScrollPhysics(),
                   child: Column(
                     children: [
-                      SizedBox(height: 30,),
+                      const SizedBox(height: 30,),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: Image.asset('assets/images/netflix.png', fit: BoxFit.cover,)),
@@ -44,14 +45,14 @@ class _LandingPageState extends State<LandingPage> {
                 //color: Colors.red,
               ),
                Container(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 color: Colors.black,
                child: Center(
                 child: SingleChildScrollView(
-                  physics:BouncingScrollPhysics(),
+                  physics:const BouncingScrollPhysics(),
                   child: Column(
                     children: [
-                      SizedBox(height: 30,),
+                      const SizedBox(height: 30,),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: Image.asset('assets/images/folder.png', fit: BoxFit.cover,)),
@@ -62,14 +63,14 @@ class _LandingPageState extends State<LandingPage> {
                 //color: Colors.red,
               ),
                Container(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 color: Colors.black,
                child: Center(
                 child: SingleChildScrollView(
-                  physics:BouncingScrollPhysics(),
+                  physics:const BouncingScrollPhysics(),
                   child: Column(
                     children: [
-                      SizedBox(height: 30,),
+                      const SizedBox(height: 30,),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: Image.asset('assets/images/video.png', fit: BoxFit.cover,)),
@@ -83,7 +84,7 @@ class _LandingPageState extends State<LandingPage> {
           ),
         ),
         Container(
-          alignment: Alignment(0, 0.75),
+          alignment: const Alignment(0, 0.75),
           child: SmoothPageIndicator(controller: _controller, count: 3))
       ],
     ),
