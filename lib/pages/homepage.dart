@@ -58,10 +58,12 @@ class _HomePageState extends State<HomePage> {
               }
               return Column(
                 children: [
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 150),
                   for (final category in postsByCategory.keys)
+                 
                     _buildSection(
                         category, category, 200, postsByCategory[category]!),
+                        SizedBox(height: 50,),
                 ],
               );
             }
@@ -76,6 +78,7 @@ class _HomePageState extends State<HomePage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        //SizedBox(height: 130,),
         Padding(
           padding: const EdgeInsets.only(left: 10),
           child: Row(

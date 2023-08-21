@@ -11,7 +11,7 @@ class Show {
   final String poster;
   final String category;
   final List<String> images;
-  final List<Season> seasons;
+  final List<Season>? seasons;
 
   Show({
     required this.category,
@@ -25,7 +25,7 @@ class Show {
     required this.download,
     required this.poster,
     required this.images,
-    required this.seasons,
+      this.seasons,
   });
 }
 

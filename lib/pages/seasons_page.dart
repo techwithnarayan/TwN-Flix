@@ -64,11 +64,11 @@ class _SeasonsPageState extends State<SeasonsPage> {
                 });
               },
               items: List.generate(
-                widget.show.seasons.length,
+                widget.show.seasons!.length,
                 (index) {
                   return DropdownMenuItem<int>(
                     value: index,
-                    child: Text('Season ${widget.show.seasons[index].seasonNumber}'),
+                    child: Text('Season ${widget.show.seasons![index].seasonNumber}'),
                   );
                 },
               ),
@@ -76,9 +76,9 @@ class _SeasonsPageState extends State<SeasonsPage> {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: widget.show.seasons[selectedSeasonIndex].episodes.length,
+              itemCount: widget.show.seasons![selectedSeasonIndex].episodes.length,
               itemBuilder: (context, index) {
-                final episode = widget.show.seasons[selectedSeasonIndex].episodes[index];
+                final episode = widget.show.seasons![selectedSeasonIndex].episodes[index];
                 return ListTile(
                   title: Text(episode.episodeTitle),
                   subtitle: Text("Episode ${episode.episodeNumber}"),
