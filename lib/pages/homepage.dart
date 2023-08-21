@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final postDetails = PostDetails();
-  late Future<List<Posts>> _futurePosts;
+  late Future<List<Show>> _futurePosts;
 
   @override
   void initState() {
@@ -46,9 +46,9 @@ class _HomePageState extends State<HomePage> {
                 child: Text("Error ${snapshot.error}"),
               );
             } else {
-              final List<Posts> allPosts = snapshot.data!;
+              final List<Show> allPosts = snapshot.data!;
               // Group the posts by category
-              final Map<String, List<Posts>> postsByCategory = {};
+              final Map<String, List<Show>> postsByCategory = {};
               for (final post in allPosts) {
                 if (postsByCategory.containsKey(post.category)) {
                   postsByCategory[post.category]!.add(post);
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildSection(
-      String title, String category, double height, List<Posts> posts) {
+      String title, String category, double height, List<Show> posts) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   );
                 },
-                child: Text(
+                child: const Text(
                   "See All",
                   style: TextStyle(fontSize: 18),
                 ),

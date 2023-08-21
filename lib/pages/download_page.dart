@@ -72,7 +72,7 @@ class _DownloadPageState extends State<DownloadPage> {
                           },
                         );
                       },
-                      child: Container(child: Text("Download Now")))
+                      child: Container(child: const Text("Download Now")))
                 ],
               )));
   }

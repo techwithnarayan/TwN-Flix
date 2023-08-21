@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class CategoryPage extends StatelessWidget {
   final String category;
-  final List<Posts> posts;
+  final List<Show> posts;
 
   const CategoryPage({super.key, required this.category, required this.posts});
 

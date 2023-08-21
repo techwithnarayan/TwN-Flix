@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
        theme:ThemeData(
-    textTheme: TextTheme(
-      bodyText1: TextStyle(),
-      bodyText2: TextStyle(),
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(),
+      bodyMedium: TextStyle(),
     ).apply(
       bodyColor: Colors.white, 
       displayColor: Colors.blue, 
